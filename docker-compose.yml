@@ -1,10 +1,10 @@
 services:
-  notifications_api:
+  notifications-api:
     build: "."
     volumes:
       - .:/notifications_api
     depends_on:
-      - notifications_db
+      - notifications-db
     env_file:
       - .env
     networks:
@@ -18,7 +18,7 @@ services:
         condition: 'on-failure'
         delay: 5s
         max_attempts: 3
-  notifications_db:
+  notifications-db:
     restart: always
     image: postgres
     container_name: notifications_db
