@@ -6,4 +6,12 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   post 'notification', to: 'notifications#create'
+
+  scope :users do
+    get '/', to: 'users#index'
+    post '/', to: 'users#create'
+    get '/:id', to: 'users#show'
+    put '/:id', to: 'users#update'
+    delete '/:id', to: 'users#destroy'
+  end
 end
