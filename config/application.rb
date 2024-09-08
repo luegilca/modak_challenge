@@ -28,5 +28,11 @@ module Notifications
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+    config.time_zone = ENV['TZ']
+    config.autoload_paths << Rails.root.join('lib')
+    config.autoload_paths << Rails.root.join('lib/interfaces')
+
+    config.log_formatter = ::Logger::Formatter.new
+    config.log_level = :debug
   end
 end

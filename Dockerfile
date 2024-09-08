@@ -18,8 +18,8 @@ ENV RAILS_ENV $RAILS_ENV
 ENV RAILS_SERVE_STATIC_FILES true
 ENV RAILS_LOG_TO_STDOUT true
 ENV WEB_CONCURRENCY 2
-ENV MIN_THREADS 5
-ENV MAX_THREADS 20
+ENV RAILS_MIN_THREADS 5
+ENV RAILS_MAX_THREADS 20
 ENV BUNDLER_VERSION 2.4
 
 RUN gem install bundler -v $BUNDLER_VERSION
@@ -33,4 +33,4 @@ RUN useradd rails --create-home --shell /bin/bash && \
 USER rails:rails
 
 EXPOSE $APP_PORT
-CMD bin/rails s -p $APP_PORT -b '0.0.0.0'
+CMD rm -f tmp/pids/server.pid && bin/rails s -p $APP_PORT -b '0.0.0.0'
