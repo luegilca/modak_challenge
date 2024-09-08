@@ -10,7 +10,7 @@ module JsonResponse
   def general_error(errors)
     render json: {
       data: {
-        errors: errors
+        errors: [ errors ]
       }
     }, status: :internal_server_error
   end
