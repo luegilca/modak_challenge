@@ -1,13 +1,25 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  type: 
+  notification_type: 'base_rate_limit_test' 
   frequency: 1
-  interval: 1
+  interval: 2
   active: false
 
 two:
-  type: 
+  notification_type: 'single_frequency_test'
   frequency: 1
-  interval: 1
+  interval: 5
+  active: true
+
+three:
+  notification_type: 'multiple_frequency_test'
+  frequency: 2
+  interval: 5
+  active: true
+
+four:
+  notification_type: 'inactive_frequency_test'
+  frequency: 1
+  interval: 3600
   active: false

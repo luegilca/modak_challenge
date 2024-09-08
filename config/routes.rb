@@ -7,19 +7,19 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   scope :users do
-    get '/', to: 'users#index'
-    post '/', to: 'users#create'
-    get '/:id', to: 'users#show'
-    patch '/:id', to: 'users#update'
-    delete '/:id', to: 'users#destroy'
+    get '/', to: 'users#index', as: :get_all_users
+    post '/', to: 'users#create', as: :create_users
+    get '/:id', to: 'users#show', as: :get_users
+    patch '/:id', to: 'users#update', as: :update_users
+    delete '/:id', to: 'users#destroy', as: :delete_users
   end
 
   scope :notifications do
-    get '/', to: 'notifications#index'
-    post '/', to: 'notifications#create'
-    post '/send', to: 'notifications#send_notification'
-    get '/:id', to: 'notifications#show'
-    patch '/:id', to: 'notifications#update'
-    delete '/:id', to: 'notifications#destroy'
+    get '/', to: 'notifications#index', as: :get_all_notifications
+    post '/', to: 'notifications#create', as: :create_notifications
+    post '/send', to: 'notifications#send_notification', as: :send_notifications
+    get '/:id', to: 'notifications#show', as: :get_notifications
+    patch '/:id', to: 'notifications#update', as: :update_notifications
+    delete '/:id', to: 'notifications#destroy', as: :destroy_notifications
   end
 end
