@@ -12,7 +12,13 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
 
   test "should create user" do
     assert_difference("User.count") do
-      post create_users_path, params: { user: { name: "Namechanged", lastname: "Samelastname", email: "same@test.com" } }
+      post create_users_path, params: { 
+        user: { 
+          name: "Namechanged", 
+          lastname: "Samelastname", 
+          email: "same@test.com" 
+        } 
+      }
     end
 
     assert_response :created
@@ -20,7 +26,12 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
 
   test "should not create a user due to missing fields" do
     assert_no_changes("User.count") do
-      post create_users_path, params: { user: { lastname: "Samelastname", email: "same@test.com" } }
+      post create_users_path, params: { 
+        user: { 
+          lastname: "Samelastname", 
+          email: "same@test.com" 
+        } 
+      }
     end
 
     assert_response :bad_request
@@ -32,7 +43,13 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update user" do
-    patch update_users_path(@user), params: { user: { name: "Namechanged", lastname: "Samelastname", email: "same@test.com" } }
+    patch update_users_path(@user), params: { 
+      user: { 
+        name: "Namechanged", 
+        lastname: "Samelastname", 
+        email: "same@test.com" 
+      } 
+    }
     assert_response :success
   end
 
