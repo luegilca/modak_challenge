@@ -1,13 +1,19 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  type: 
+  notification_type: 'seconds_test' 
   frequency: 1
-  interval: 1
+  interval: 5
   active: false
 
 two:
-  type: 
+  notification_type: 'minute_test'
   frequency: 1
-  interval: 1
+  interval: 60
+  active: false
+
+three:
+  notification_type: 'ten_seconds_test'
+  frequency: 1
+  interval: 10
   active: false
