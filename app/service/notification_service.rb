@@ -13,10 +13,10 @@ class NotificationService
   end
 
   def is_rate_limited(notification:, user_id:)
-    unless notification
+    unless notification && notification.active
       return false
     end
-    
+
     now = Time.zone.now
     notifications_sent_to_user = UserNotification.where(user_id: user_id).where(notification: notification)
     time_filter = -> record { ( (now - record.sent_at) / 1.second ).to_i <= notification.interval }
