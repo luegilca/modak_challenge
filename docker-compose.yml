@@ -1,0 +1,39 @@
+services:
+  notifications-api:
+    build: "."
+    volumes:
+      - .:/notifications_api
+    depends_on:
+      - notifications-db
+    env_file:
+      - .env
+    networks:
+      - backend
+    ports:
+      - '3001:3000'
+    container_name: notifications_api
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: 'on-failure'
+        delay: 5s
+        max_attempts: 3
+  notifications-db:
+    restart: always
+    image: postgres
+    container_name: notifications_db
+    networks:
+      - backend
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+      - POSTGRES_USER=modak
+      - POSTGRES_PASSWORD=m0dak*
+      - POSTGRES_DB=notifications
+    ports:
+      - '5433:5432'
+    volumes:
+      - notifications_data:/var/lib/postgresql/data
+volumes:
+  notifications_data:
+networks:
+  backend:
