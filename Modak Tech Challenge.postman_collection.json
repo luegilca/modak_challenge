@@ -1,0 +1,1479 @@
+{
+	"info": {
+		"_postman_id": "3c228083-2250-498f-ae35-c972162f0bcc",
+		"name": "Modak Tech Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2669740"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user\": {\n        \"name\": \"Pepe\",\n        \"lastname\": \"Perez\",\n        \"email\": \"pepe@test.com\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3001/users",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user\": {\n        \"name\": \"Pepe\",\n        \"lastname\": \"Perez\",\n        \"email\": \"pepe@test.com\"\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3001/users",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "0"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-permitted-cross-domain-policies",
+									"value": "none"
+								},
+								{
+									"key": "referrer-policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "location",
+									"value": "http://localhost:3001/users/8"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "Accept"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"b39da087696816359dbae3619660f42c\""
+								},
+								{
+									"key": "cache-control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "x-request-id",
+									"value": "a8b192a3-1032-4218-9d6d-32daf4f319b0"
+								},
+								{
+									"key": "x-runtime",
+									"value": "0.078329"
+								},
+								{
+									"key": "server-timing",
+									"value": "start_processing.action_controller;dur=0.06, sql.active_record;dur=13.73, transaction.active_record;dur=9.06, process_action.action_controller;dur=50.41"
+								},
+								{
+									"key": "Content-Length",
+									"value": "155"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 8,\n    \"name\": \"Pepe\",\n    \"lastname\": \"Perez\",\n    \"email\": \"pepe@test.com\",\n    \"created_at\": \"2024-09-07T20:49:23.646-05:00\",\n    \"updated_at\": \"2024-09-07T20:49:23.646-05:00\"\n}"
+						},
+						{
+							"name": "Validation error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user\": {\n        \"name\": \"Pepe\",\n        \"email\": \"pepe@test.com\"\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3001/users",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "0"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-permitted-cross-domain-policies",
+									"value": "none"
+								},
+								{
+									"key": "referrer-policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "Accept"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "x-request-id",
+									"value": "332c0f4d-530f-4bcc-8a5e-c207e61e835d"
+								},
+								{
+									"key": "x-runtime",
+									"value": "0.061931"
+								},
+								{
+									"key": "server-timing",
+									"value": "start_processing.action_controller;dur=0.09, process_action.action_controller;dur=8.02"
+								},
+								{
+									"key": "Content-Length",
+									"value": "127"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"errors\": [\n            \"There are some required fields that are not present!\",\n            \"param is missing or the value is empty: lastname\"\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get all users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3001/users",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3001/users",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "0"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-permitted-cross-domain-policies",
+									"value": "none"
+								},
+								{
+									"key": "referrer-policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "Accept"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"58af547e35186ecede7e855266c9a070\""
+								},
+								{
+									"key": "cache-control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "x-request-id",
+									"value": "3459f201-6c6f-40d2-a2bb-8b59184d1612"
+								},
+								{
+									"key": "x-runtime",
+									"value": "0.015128"
+								},
+								{
+									"key": "server-timing",
+									"value": "start_processing.action_controller;dur=0.01, sql.active_record;dur=0.82, instantiation.active_record;dur=0.13, process_action.action_controller;dur=5.32"
+								},
+								{
+									"key": "Content-Length",
+									"value": "632"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Luis\",\n        \"lastname\": \"Gil\",\n        \"email\": \"luergica@gmail.com\",\n        \"created_at\": \"2024-09-07T17:37:05.379-05:00\",\n        \"updated_at\": \"2024-09-07T17:37:05.379-05:00\"\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Belu\",\n        \"lastname\": \"Cernadas\",\n        \"email\": \"belu@modak.com\",\n        \"created_at\": \"2024-09-07T17:37:05.392-05:00\",\n        \"updated_at\": \"2024-09-07T17:37:05.392-05:00\"\n    },\n    {\n        \"id\": 7,\n        \"name\": \"Pepe\",\n        \"lastname\": \"Perez\",\n        \"email\": \"pepe@test.com\",\n        \"created_at\": \"2024-09-07T20:48:03.448-05:00\",\n        \"updated_at\": \"2024-09-07T20:48:03.448-05:00\"\n    },\n    {\n        \"id\": 8,\n        \"name\": \"Juan\",\n        \"lastname\": \"Perez\",\n        \"email\": \"juan@test.com\",\n        \"created_at\": \"2024-09-07T20:49:23.646-05:00\",\n        \"updated_at\": \"2024-09-07T20:50:53.560-05:00\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get one user by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3001/users/7",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"users",
+								"7"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3001/users/7",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"users",
+										"7"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "0"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-permitted-cross-domain-policies",
+									"value": "none"
+								},
+								{
+									"key": "referrer-policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "Accept"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"f2a86dc926517c5ed5e803ef5d6bda68\""
+								},
+								{
+									"key": "cache-control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "x-request-id",
+									"value": "3579bb11-7131-4caf-bc12-07a89acf35f4"
+								},
+								{
+									"key": "x-runtime",
+									"value": "0.013316"
+								},
+								{
+									"key": "server-timing",
+									"value": "start_processing.action_controller;dur=0.01, sql.active_record;dur=1.16, instantiation.active_record;dur=0.13, process_action.action_controller;dur=4.96"
+								},
+								{
+									"key": "Content-Length",
+									"value": "155"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 7,\n    \"name\": \"Pepe\",\n    \"lastname\": \"Perez\",\n    \"email\": \"pepe@test.com\",\n    \"created_at\": \"2024-09-07T20:48:03.448-05:00\",\n    \"updated_at\": \"2024-09-07T20:48:03.448-05:00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user\": {\n        \"name\": \"Juan\",\n        \"lastname\": \"Perez\",\n        \"email\": \"juan@test.com\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3001/users/7",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"users",
+								"7"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user\": {\n        \"name\": \"Pepe\",\n        \"lastname\": \"Perez\",\n        \"email\": \"pepe@test.com\"\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3001/users/8",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"users",
+										"8"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "0"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-permitted-cross-domain-policies",
+									"value": "none"
+								},
+								{
+									"key": "referrer-policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "Accept"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"5895fd2c3caa67b2a8e16103698de8cc\""
+								},
+								{
+									"key": "cache-control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "x-request-id",
+									"value": "6865d601-8ce5-4e4a-824a-df095ac731b3"
+								},
+								{
+									"key": "x-runtime",
+									"value": "0.136923"
+								},
+								{
+									"key": "server-timing",
+									"value": "start_processing.action_controller;dur=0.09, sql.active_record;dur=18.59, instantiation.active_record;dur=0.81, transaction.active_record;dur=8.83, process_action.action_controller;dur=97.24"
+								},
+								{
+									"key": "Content-Length",
+									"value": "155"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"Juan\",\n    \"lastname\": \"Perez\",\n    \"email\": \"juan@test.com\",\n    \"id\": 8,\n    \"created_at\": \"2024-09-07T20:49:23.646-05:00\",\n    \"updated_at\": \"2024-09-07T20:50:53.560-05:00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3001/users/8",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"users",
+								"8"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:3001/users/8",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"users",
+										"8"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "0"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-permitted-cross-domain-policies",
+									"value": "none"
+								},
+								{
+									"key": "referrer-policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "x-request-id",
+									"value": "9ed18007-1f48-43f6-8c00-99ccf8b0c38a"
+								},
+								{
+									"key": "x-runtime",
+									"value": "0.049395"
+								},
+								{
+									"key": "server-timing",
+									"value": "start_processing.action_controller;dur=0.09, sql.active_record;dur=8.26, instantiation.active_record;dur=0.84, transaction.active_record;dur=5.12, process_action.action_controller;dur=23.66"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Foreign Key Violation error",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:3001/users/1",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"users",
+										"1"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json; charset=UTF-8"
+								},
+								{
+									"key": "x-request-id",
+									"value": "340ca3b8-1c39-4553-8eeb-6b6cd139513d"
+								},
+								{
+									"key": "x-runtime",
+									"value": "0.070377"
+								},
+								{
+									"key": "server-timing",
+									"value": "start_processing.action_controller;dur=0.08, sql.active_record;dur=9.04, instantiation.active_record;dur=1.04, transaction.active_record;dur=5.73, process_action.action_controller;dur=26.04"
+								},
+								{
+									"key": "Content-Length",
+									"value": "414"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 500,\n    \"error\": \"Internal Server Error\",\n    \"exception\": \"#<ActiveRecord::InvalidForeignKey: PG::ForeignKeyViolation: ERROR:  update or delete on table \\\"users\\\" violates foreign key constraint \\\"fk_rails_cdbff2ee9e\\\" on table \\\"user_notifications\\\"\\nDETAIL:  Key (id)=(1) is still referenced from table \\\"user_notifications\\\".\\n>\",\n    \"traces\": {\n        \"Application Trace\": [],\n        \"Framework Trace\": [],\n        \"Full Trace\": []\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Notifications",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"notification\":  {\n        \"notification_type\": \"design\",\n        \"frequency\": 1,\n        \"interval\": 7200,\n        \"active\": true\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3001/notifications",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"notifications"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"notification\":  {\n        \"notification_type\": \"design\",\n        \"frequency\": 1,\n        \"interval\": 7200,\n        \"active\": true\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3001/notifications",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"notifications"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "0"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-permitted-cross-domain-policies",
+									"value": "none"
+								},
+								{
+									"key": "referrer-policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "location",
+									"value": "http://localhost:3001/notifications/4"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "Accept"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"0c6c74e71a00817fa362dad65103c3aa\""
+								},
+								{
+									"key": "cache-control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "x-request-id",
+									"value": "1cbe3f48-7331-4436-a571-bbcdc540c4ad"
+								},
+								{
+									"key": "x-runtime",
+									"value": "0.237295"
+								},
+								{
+									"key": "server-timing",
+									"value": "start_processing.action_controller;dur=0.04, sql.active_record;dur=12.84, transaction.active_record;dur=3.65, process_action.action_controller;dur=32.38"
+								},
+								{
+									"key": "Content-Length",
+									"value": "171"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 4,\n    \"notification_type\": \"design\",\n    \"frequency\": 1,\n    \"interval\": 7200,\n    \"active\": true,\n    \"created_at\": \"2024-09-07T21:07:55.566-05:00\",\n    \"updated_at\": \"2024-09-07T21:07:55.566-05:00\"\n}"
+						},
+						{
+							"name": "Validation error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"notification\":  {\n        \"notification_type\": \"design\",\n        \"interval\": 7200,\n        \"active\": true\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3001/notifications",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"notifications"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "0"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-permitted-cross-domain-policies",
+									"value": "none"
+								},
+								{
+									"key": "referrer-policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "Accept"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "x-request-id",
+									"value": "fe0718db-fb99-4ffa-9a8b-13a8fe295a2d"
+								},
+								{
+									"key": "x-runtime",
+									"value": "0.035493"
+								},
+								{
+									"key": "server-timing",
+									"value": "start_processing.action_controller;dur=0.07, process_action.action_controller;dur=6.57"
+								},
+								{
+									"key": "Content-Length",
+									"value": "128"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"errors\": [\n            \"There are some required fields that are not present!\",\n            \"param is missing or the value is empty: frequency\"\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get all notifications",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3001/notifications",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"notifications"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3001/notifications",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"notifications"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "0"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-permitted-cross-domain-policies",
+									"value": "none"
+								},
+								{
+									"key": "referrer-policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "Accept"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"5d9ee4c6ab229294a951e22173c3a1c2\""
+								},
+								{
+									"key": "cache-control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "x-request-id",
+									"value": "cf27c3b6-23cf-4669-8f4c-7cf747f38d67"
+								},
+								{
+									"key": "x-runtime",
+									"value": "0.290796"
+								},
+								{
+									"key": "server-timing",
+									"value": "start_processing.action_controller;dur=0.03, sql.active_record;dur=11.55, instantiation.active_record;dur=19.49, process_action.action_controller;dur=52.79"
+								},
+								{
+									"key": "Content-Length",
+									"value": "689"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"notification_type\": \"marketing\",\n        \"frequency\": 1,\n        \"interval\": 5,\n        \"active\": true,\n        \"created_at\": \"2024-09-07T17:41:31.802-05:00\",\n        \"updated_at\": \"2024-09-07T17:41:31.802-05:00\"\n    },\n    {\n        \"id\": 2,\n        \"notification_type\": \"design\",\n        \"frequency\": 1,\n        \"interval\": 7200,\n        \"active\": true,\n        \"created_at\": \"2024-09-07T21:06:59.327-05:00\",\n        \"updated_at\": \"2024-09-07T21:06:59.327-05:00\"\n    },\n    {\n        \"id\": 3,\n        \"notification_type\": \"design\",\n        \"frequency\": 1,\n        \"interval\": 7200,\n        \"active\": true,\n        \"created_at\": \"2024-09-07T21:07:26.370-05:00\",\n        \"updated_at\": \"2024-09-07T21:07:26.370-05:00\"\n    },\n    {\n        \"id\": 4,\n        \"notification_type\": \"design\",\n        \"frequency\": 1,\n        \"interval\": 7200,\n        \"active\": true,\n        \"created_at\": \"2024-09-07T21:07:55.566-05:00\",\n        \"updated_at\": \"2024-09-07T21:07:55.566-05:00\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get one notification",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3001/notifications/2",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"notifications",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3001/notifications/2",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"notifications",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "0"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-permitted-cross-domain-policies",
+									"value": "none"
+								},
+								{
+									"key": "referrer-policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "Accept"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"1520de7bf3f02472ed3de7eccf4c3c7d\""
+								},
+								{
+									"key": "cache-control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "x-request-id",
+									"value": "9d99060b-ad08-4089-ac6b-d6a62855c196"
+								},
+								{
+									"key": "x-runtime",
+									"value": "0.086104"
+								},
+								{
+									"key": "server-timing",
+									"value": "start_processing.action_controller;dur=0.07, sql.active_record;dur=8.25, instantiation.active_record;dur=0.70, process_action.action_controller;dur=42.39"
+								},
+								{
+									"key": "Content-Length",
+									"value": "171"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"notification_type\": \"design\",\n    \"frequency\": 1,\n    \"interval\": 7200,\n    \"active\": true,\n    \"created_at\": \"2024-09-07T21:06:59.327-05:00\",\n    \"updated_at\": \"2024-09-07T21:06:59.327-05:00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"notification\":  {\n        \"notification_type\": \"design\",\n        \"frequency\": 1,\n        \"interval\": 7200,\n        \"active\": false\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3001/notifications/2",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"notifications",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"notification\":  {\n        \"notification_type\": \"design\",\n        \"frequency\": 1,\n        \"interval\": 7200,\n        \"active\": false\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3001/notifications/2",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"notifications",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "0"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-permitted-cross-domain-policies",
+									"value": "none"
+								},
+								{
+									"key": "referrer-policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "Accept"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"ac3482f0d1f811633d6d092c510554c7\""
+								},
+								{
+									"key": "cache-control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "x-request-id",
+									"value": "ce4b49ed-71b1-40f4-98d2-f3d540446a6a"
+								},
+								{
+									"key": "x-runtime",
+									"value": "0.105008"
+								},
+								{
+									"key": "server-timing",
+									"value": "start_processing.action_controller;dur=0.94, sql.active_record;dur=19.10, instantiation.active_record;dur=1.31, transaction.active_record;dur=15.26, process_action.action_controller;dur=73.62"
+								},
+								{
+									"key": "Content-Length",
+									"value": "172"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"notification_type\": \"design\",\n    \"frequency\": 1,\n    \"interval\": 7200,\n    \"active\": false,\n    \"id\": 2,\n    \"created_at\": \"2024-09-07T21:06:59.327-05:00\",\n    \"updated_at\": \"2024-09-07T21:11:01.661-05:00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3001/notifications/5",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"notifications",
+								"5"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:3001/notifications/5",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"notifications",
+										"5"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "0"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-permitted-cross-domain-policies",
+									"value": "none"
+								},
+								{
+									"key": "referrer-policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "x-request-id",
+									"value": "d881587c-4d94-41b6-8b8b-7715b391c5ef"
+								},
+								{
+									"key": "x-runtime",
+									"value": "0.023522"
+								},
+								{
+									"key": "server-timing",
+									"value": "start_processing.action_controller;dur=0.01, sql.active_record;dur=5.88, instantiation.active_record;dur=0.27, transaction.active_record;dur=6.42, process_action.action_controller;dur=12.35"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Not found error",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:3001/notifications/5",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"notifications",
+										"5"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json; charset=UTF-8"
+								},
+								{
+									"key": "x-request-id",
+									"value": "29020db2-0ffe-4908-a269-0e6b62e5a19a"
+								},
+								{
+									"key": "x-runtime",
+									"value": "0.165219"
+								},
+								{
+									"key": "server-timing",
+									"value": "start_processing.action_controller;dur=0.07, sql.active_record;dur=3.40, instantiation.active_record;dur=0.18, process_action.action_controller;dur=13.02"
+								},
+								{
+									"key": "Content-Length",
+									"value": "16766"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 404,\n    \"error\": \"Not Found\",\n    \"exception\": \"#<ActiveRecord::RecordNotFound: Couldn't find Notification with 'id'=5>\",\n    \"traces\": {\n        \"Application Trace\": [\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 1,\n                \"trace\": \"app/controllers/notifications_controller.rb:55:in `set_notification'\"\n            }\n        ],\n        \"Framework Trace\": [\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 0,\n                \"trace\": \"activerecord (7.1.4) lib/active_record/core.rb:253:in `find'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 2,\n                \"trace\": \"activesupport (7.1.4) lib/active_support/callbacks.rb:403:in `block in make_lambda'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 3,\n                \"trace\": \"activesupport (7.1.4) lib/active_support/callbacks.rb:183:in `block (2 levels) in halting_and_conditional'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 4,\n                \"trace\": \"actionpack (7.1.4) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 5,\n                \"trace\": \"activesupport (7.1.4) lib/active_support/callbacks.rb:184:in `block in halting_and_conditional'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 6,\n                \"trace\": \"activesupport (7.1.4) lib/active_support/callbacks.rb:598:in `block in invoke_before'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 7,\n                \"trace\": \"activesupport (7.1.4) lib/active_support/callbacks.rb:598:in `each'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 8,\n                \"trace\": \"activesupport (7.1.4) lib/active_support/callbacks.rb:598:in `invoke_before'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 9,\n                \"trace\": \"activesupport (7.1.4) lib/active_support/callbacks.rb:109:in `run_callbacks'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 10,\n                \"trace\": \"actionpack (7.1.4) lib/abstract_controller/callbacks.rb:258:in `process_action'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 11,\n                \"trace\": \"actionpack (7.1.4) lib/action_controller/metal/rescue.rb:25:in `process_action'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 12,\n                \"trace\": \"actionpack (7.1.4) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 13,\n                \"trace\": \"activesupport (7.1.4) lib/active_support/notifications.rb:206:in `block in instrument'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 14,\n                \"trace\": \"activesupport (7.1.4) lib/active_support/notifications/instrumenter.rb:58:in `instrument'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 15,\n                \"trace\": \"activesupport (7.1.4) lib/active_support/notifications.rb:206:in `instrument'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 16,\n                \"trace\": \"actionpack (7.1.4) lib/action_controller/metal/instrumentation.rb:73:in `process_action'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 17,\n                \"trace\": \"actionpack (7.1.4) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 18,\n                \"trace\": \"activerecord (7.1.4) lib/active_record/railties/controller_runtime.rb:32:in `process_action'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 19,\n                \"trace\": \"actionpack (7.1.4) lib/abstract_controller/base.rb:160:in `process'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 20,\n                \"trace\": \"actionpack (7.1.4) lib/action_controller/metal.rb:227:in `dispatch'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 21,\n                \"trace\": \"actionpack (7.1.4) lib/action_controller/metal.rb:309:in `dispatch'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 22,\n                \"trace\": \"actionpack (7.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 23,\n                \"trace\": \"actionpack (7.1.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 24,\n                \"trace\": \"actionpack (7.1.4) lib/action_dispatch/journey/router.rb:51:in `block in serve'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 25,\n                \"trace\": \"actionpack (7.1.4) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 26,\n                \"trace\": \"actionpack (7.1.4) lib/action_dispatch/journey/router.rb:124:in `each'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 27,\n                \"trace\": \"actionpack (7.1.4) lib/action_dispatch/journey/router.rb:124:in `find_routes'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 28,\n                \"trace\": \"actionpack (7.1.4) lib/action_dispatch/journey/router.rb:32:in `serve'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 29,\n                \"trace\": \"actionpack (7.1.4) lib/action_dispatch/routing/route_set.rb:882:in `call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 30,\n                \"trace\": \"rack (3.1.7) lib/rack/etag.rb:29:in `call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 31,\n                \"trace\": \"rack (3.1.7) lib/rack/conditional_get.rb:43:in `call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 32,\n                \"trace\": \"rack (3.1.7) lib/rack/head.rb:15:in `call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 33,\n                \"trace\": \"activerecord (7.1.4) lib/active_record/migration.rb:655:in `call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 34,\n                \"trace\": \"actionpack (7.1.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 35,\n                \"trace\": \"activesupport (7.1.4) lib/active_support/callbacks.rb:101:in `run_callbacks'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 36,\n                \"trace\": \"actionpack (7.1.4) lib/action_dispatch/middleware/callbacks.rb:28:in `call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 37,\n                \"trace\": \"actionpack (7.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 38,\n                \"trace\": \"actionpack (7.1.4) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 39,\n                \"trace\": \"actionpack (7.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 40,\n                \"trace\": \"actionpack (7.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 41,\n                \"trace\": \"railties (7.1.4) lib/rails/rack/logger.rb:37:in `call_app'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 42,\n                \"trace\": \"railties (7.1.4) lib/rails/rack/logger.rb:24:in `block in call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 43,\n                \"trace\": \"activesupport (7.1.4) lib/active_support/tagged_logging.rb:139:in `block in tagged'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 44,\n                \"trace\": \"activesupport (7.1.4) lib/active_support/tagged_logging.rb:39:in `tagged'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 45,\n                \"trace\": \"activesupport (7.1.4) lib/active_support/tagged_logging.rb:139:in `tagged'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 46,\n                \"trace\": \"activesupport (7.1.4) lib/active_support/broadcast_logger.rb:241:in `method_missing'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 47,\n                \"trace\": \"railties (7.1.4) lib/rails/rack/logger.rb:24:in `call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 48,\n                \"trace\": \"actionpack (7.1.4) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 49,\n                \"trace\": \"actionpack (7.1.4) lib/action_dispatch/middleware/request_id.rb:28:in `call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 50,\n                \"trace\": \"rack (3.1.7) lib/rack/runtime.rb:24:in `call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 51,\n                \"trace\": \"activesupport (7.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 52,\n                \"trace\": \"actionpack (7.1.4) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 53,\n                \"trace\": \"actionpack (7.1.4) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 54,\n                \"trace\": \"actionpack (7.1.4) lib/action_dispatch/middleware/server_timing.rb:58:in `call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 55,\n                \"trace\": \"actionpack (7.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 56,\n                \"trace\": \"actionpack (7.1.4) lib/action_dispatch/middleware/static.rb:25:in `call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 57,\n                \"trace\": \"rack (3.1.7) lib/rack/sendfile.rb:114:in `call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 58,\n                \"trace\": \"actionpack (7.1.4) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 59,\n                \"trace\": \"railties (7.1.4) lib/rails/engine.rb:536:in `call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 60,\n                \"trace\": \"puma (6.4.2) lib/puma/configuration.rb:272:in `call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 61,\n                \"trace\": \"puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 62,\n                \"trace\": \"puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 63,\n                \"trace\": \"puma (6.4.2) lib/puma/request.rb:99:in `handle_request'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 64,\n                \"trace\": \"puma (6.4.2) lib/puma/server.rb:464:in `process_client'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 65,\n                \"trace\": \"puma (6.4.2) lib/puma/server.rb:245:in `block in run'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 66,\n                \"trace\": \"puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'\"\n            }\n        ],\n        \"Full Trace\": [\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 0,\n                \"trace\": \"activerecord (7.1.4) lib/active_record/core.rb:253:in `find'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 1,\n                \"trace\": \"app/controllers/notifications_controller.rb:55:in `set_notification'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 2,\n                \"trace\": \"activesupport (7.1.4) lib/active_support/callbacks.rb:403:in `block in make_lambda'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 3,\n                \"trace\": \"activesupport (7.1.4) lib/active_support/callbacks.rb:183:in `block (2 levels) in halting_and_conditional'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 4,\n                \"trace\": \"actionpack (7.1.4) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 5,\n                \"trace\": \"activesupport (7.1.4) lib/active_support/callbacks.rb:184:in `block in halting_and_conditional'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 6,\n                \"trace\": \"activesupport (7.1.4) lib/active_support/callbacks.rb:598:in `block in invoke_before'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 7,\n                \"trace\": \"activesupport (7.1.4) lib/active_support/callbacks.rb:598:in `each'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 8,\n                \"trace\": \"activesupport (7.1.4) lib/active_support/callbacks.rb:598:in `invoke_before'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 9,\n                \"trace\": \"activesupport (7.1.4) lib/active_support/callbacks.rb:109:in `run_callbacks'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 10,\n                \"trace\": \"actionpack (7.1.4) lib/abstract_controller/callbacks.rb:258:in `process_action'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 11,\n                \"trace\": \"actionpack (7.1.4) lib/action_controller/metal/rescue.rb:25:in `process_action'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 12,\n                \"trace\": \"actionpack (7.1.4) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 13,\n                \"trace\": \"activesupport (7.1.4) lib/active_support/notifications.rb:206:in `block in instrument'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 14,\n                \"trace\": \"activesupport (7.1.4) lib/active_support/notifications/instrumenter.rb:58:in `instrument'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 15,\n                \"trace\": \"activesupport (7.1.4) lib/active_support/notifications.rb:206:in `instrument'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 16,\n                \"trace\": \"actionpack (7.1.4) lib/action_controller/metal/instrumentation.rb:73:in `process_action'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 17,\n                \"trace\": \"actionpack (7.1.4) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 18,\n                \"trace\": \"activerecord (7.1.4) lib/active_record/railties/controller_runtime.rb:32:in `process_action'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 19,\n                \"trace\": \"actionpack (7.1.4) lib/abstract_controller/base.rb:160:in `process'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 20,\n                \"trace\": \"actionpack (7.1.4) lib/action_controller/metal.rb:227:in `dispatch'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 21,\n                \"trace\": \"actionpack (7.1.4) lib/action_controller/metal.rb:309:in `dispatch'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 22,\n                \"trace\": \"actionpack (7.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 23,\n                \"trace\": \"actionpack (7.1.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 24,\n                \"trace\": \"actionpack (7.1.4) lib/action_dispatch/journey/router.rb:51:in `block in serve'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 25,\n                \"trace\": \"actionpack (7.1.4) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 26,\n                \"trace\": \"actionpack (7.1.4) lib/action_dispatch/journey/router.rb:124:in `each'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 27,\n                \"trace\": \"actionpack (7.1.4) lib/action_dispatch/journey/router.rb:124:in `find_routes'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 28,\n                \"trace\": \"actionpack (7.1.4) lib/action_dispatch/journey/router.rb:32:in `serve'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 29,\n                \"trace\": \"actionpack (7.1.4) lib/action_dispatch/routing/route_set.rb:882:in `call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 30,\n                \"trace\": \"rack (3.1.7) lib/rack/etag.rb:29:in `call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 31,\n                \"trace\": \"rack (3.1.7) lib/rack/conditional_get.rb:43:in `call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 32,\n                \"trace\": \"rack (3.1.7) lib/rack/head.rb:15:in `call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 33,\n                \"trace\": \"activerecord (7.1.4) lib/active_record/migration.rb:655:in `call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 34,\n                \"trace\": \"actionpack (7.1.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 35,\n                \"trace\": \"activesupport (7.1.4) lib/active_support/callbacks.rb:101:in `run_callbacks'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 36,\n                \"trace\": \"actionpack (7.1.4) lib/action_dispatch/middleware/callbacks.rb:28:in `call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 37,\n                \"trace\": \"actionpack (7.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 38,\n                \"trace\": \"actionpack (7.1.4) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 39,\n                \"trace\": \"actionpack (7.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 40,\n                \"trace\": \"actionpack (7.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 41,\n                \"trace\": \"railties (7.1.4) lib/rails/rack/logger.rb:37:in `call_app'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 42,\n                \"trace\": \"railties (7.1.4) lib/rails/rack/logger.rb:24:in `block in call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 43,\n                \"trace\": \"activesupport (7.1.4) lib/active_support/tagged_logging.rb:139:in `block in tagged'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 44,\n                \"trace\": \"activesupport (7.1.4) lib/active_support/tagged_logging.rb:39:in `tagged'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 45,\n                \"trace\": \"activesupport (7.1.4) lib/active_support/tagged_logging.rb:139:in `tagged'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 46,\n                \"trace\": \"activesupport (7.1.4) lib/active_support/broadcast_logger.rb:241:in `method_missing'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 47,\n                \"trace\": \"railties (7.1.4) lib/rails/rack/logger.rb:24:in `call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 48,\n                \"trace\": \"actionpack (7.1.4) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 49,\n                \"trace\": \"actionpack (7.1.4) lib/action_dispatch/middleware/request_id.rb:28:in `call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 50,\n                \"trace\": \"rack (3.1.7) lib/rack/runtime.rb:24:in `call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 51,\n                \"trace\": \"activesupport (7.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 52,\n                \"trace\": \"actionpack (7.1.4) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 53,\n                \"trace\": \"actionpack (7.1.4) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 54,\n                \"trace\": \"actionpack (7.1.4) lib/action_dispatch/middleware/server_timing.rb:58:in `call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 55,\n                \"trace\": \"actionpack (7.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 56,\n                \"trace\": \"actionpack (7.1.4) lib/action_dispatch/middleware/static.rb:25:in `call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 57,\n                \"trace\": \"rack (3.1.7) lib/rack/sendfile.rb:114:in `call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 58,\n                \"trace\": \"actionpack (7.1.4) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 59,\n                \"trace\": \"railties (7.1.4) lib/rails/engine.rb:536:in `call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 60,\n                \"trace\": \"puma (6.4.2) lib/puma/configuration.rb:272:in `call'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 61,\n                \"trace\": \"puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 62,\n                \"trace\": \"puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 63,\n                \"trace\": \"puma (6.4.2) lib/puma/request.rb:99:in `handle_request'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 64,\n                \"trace\": \"puma (6.4.2) lib/puma/server.rb:464:in `process_client'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 65,\n                \"trace\": \"puma (6.4.2) lib/puma/server.rb:245:in `block in run'\"\n            },\n            {\n                \"exception_object_id\": 153620,\n                \"id\": 66,\n                \"trace\": \"puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'\"\n            }\n        ]\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Send a notification",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"notification\": {\n        \"user_id\": 1,\n        \"type\": \"design\",\n        \"message\": \"Hello world!\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/notifications/send",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"notifications",
+						"send"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"notification\": {\n        \"user_id\": 1,\n        \"type\": \"design\",\n        \"message\": \"Hello world!\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3001/notifications/send",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"notifications",
+								"send"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "x-frame-options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "x-xss-protection",
+							"value": "0"
+						},
+						{
+							"key": "x-content-type-options",
+							"value": "nosniff"
+						},
+						{
+							"key": "x-permitted-cross-domain-policies",
+							"value": "none"
+						},
+						{
+							"key": "referrer-policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "vary",
+							"value": "Accept"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"1e8971ea74a80ae8705e9feebf70d7f6\""
+						},
+						{
+							"key": "cache-control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "x-request-id",
+							"value": "6c010269-3a02-4b4e-9218-433b55048050"
+						},
+						{
+							"key": "x-runtime",
+							"value": "0.461014"
+						},
+						{
+							"key": "server-timing",
+							"value": "start_processing.action_controller;dur=0.04, sql.active_record;dur=51.32, instantiation.active_record;dur=36.95, transaction.active_record;dur=10.20, process_action.action_controller;dur=191.20"
+						},
+						{
+							"key": "Content-Length",
+							"value": "79"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"message\": \"The notification was successfully delivered to recipient\"\n    }\n}"
+				},
+				{
+					"name": "Rate limit error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"notification\": {\n        \"user_id\": 1,\n        \"type\": \"design\",\n        \"message\": \"Hello world!\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3001/notifications/send",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"notifications",
+								"send"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "x-frame-options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "x-xss-protection",
+							"value": "0"
+						},
+						{
+							"key": "x-content-type-options",
+							"value": "nosniff"
+						},
+						{
+							"key": "x-permitted-cross-domain-policies",
+							"value": "none"
+						},
+						{
+							"key": "referrer-policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "vary",
+							"value": "Accept"
+						},
+						{
+							"key": "cache-control",
+							"value": "no-cache"
+						},
+						{
+							"key": "x-request-id",
+							"value": "8c12fda5-38fd-4a1c-9559-73832bcb4759"
+						},
+						{
+							"key": "x-runtime",
+							"value": "0.306837"
+						},
+						{
+							"key": "server-timing",
+							"value": "start_processing.action_controller;dur=0.07, sql.active_record;dur=13.09, instantiation.active_record;dur=11.18, process_action.action_controller;dur=79.71"
+						},
+						{
+							"key": "Content-Length",
+							"value": "79"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"errors\": [\n            \"Your notification intent was declined due to rate limit\"\n        ]\n    }\n}"
+				}
+			]
+		}
+	]
+}
